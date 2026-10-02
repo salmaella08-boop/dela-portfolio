@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dela Assalma Aulia, S.A.P. - Portofolio & Resume Professional</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        maroon: {
+                            50: '#fdf2f4',
+                            100: '#fbe5e8',
+                            200: '#f7ced5',
+                            300: '#f0a8b5',
+                            400: '#e5778b',
+                            500: '#be2e4a',
+                            600: '#9e223b',
+                            700: '#800020', /* Deep Maroon Main */
+                            800: '#6b1d2f',
+                            900: '#521422',
+                            950: '#330a13',
+                        },
+                        cream: {
+                            50: '#fdfbf7', /* Soft Cream Light */
+                            100: '#f7f2e8',
+                            200: '#eee4d1',
+                            300: '#e2d3b5',
+                            400: '#d3be94',
+                            500: '#bfa373',
+                            600: '#aa885a',
+                            700: '#8c6c46',
+                            800: '#72573b',
+                            900: '#5e4832',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 30px -10px rgba(128, 0, 32, 0.08)',
+                        'glow': '0 0 25px rgba(128, 0, 32, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(253, 251, 247, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 211, 181, 0.5);
+        }
+        .bg-pattern {
+            background-color: #fdfbf7;
+            background-image: radial-gradient(#800020 0.5px, transparent 0.5px), radial-gradient(#800020 0.5px, #fdfbf7 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            background-opacity: 0.03;
+        }
+    </style>
+</head>
+<body class="bg-cream-50 text-stone-800 font-sans antialiased selection:bg-maroon-700 selection:text-cream-50">
+
+    <!-- Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-cream-50/90 backdrop-blur-md border-b border-cream-200/60 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#hero" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full bg-maroon-700 text-cream-50 flex items-center justify-center font-serif font-bold text-lg shadow-md group-hover:scale-105 transition-transform">
+                    DA
+                </div>
+                <div>
+                    <span class="font-serif font-bold text-lg sm:text-xl text-maroon-800 block leading-tight">Dela Assalma A.</span>
+                    <span class="text-xs text-cream-700 tracking-wider font-medium uppercase block">Administrasi Publik S.A.P</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-stone-700">
+                <a href="#about" class="hover:text-maroon-700 transition-colors">Tentang Saya</a>
+                <a href="#experience" class="hover:text-maroon-700 transition-colors">Pengalaman</a>
+                <a href="#dinsos-gallery" class="hover:text-maroon-700 transition-colors">Dokumentasi Magang</a>
+                <a href="#skills" class="hover:text-maroon-700 transition-colors">Keahlian</a>
+                <a href="#achievements" class="hover:text-maroon-700 transition-colors">Prestasi & Sertifikat</a>
+                <a href="#contact" class="hover:text-maroon-700 transition-colors">Kontak</a>
+            </nav>
+
+            <!-- Navigation Action CTA Button -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="#contact" class="px-5 py-2.5 rounded-full bg-maroon-700 hover:bg-maroon-800 text-cream-50 text-sm font-semibold shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                    <i class="fa-solid fa-paper-plane text-xs"></i>
+                    <span>Hubungi Saya</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobileMenuBtn" aria-label="Toggle Mobile Menu" class="md:hidden p-2 rounded-lg text-maroon-800 hover:bg-cream-200 transition-colors">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-cream-50 border-b border-cream-200 px-6 py-6 shadow-xl space-y-4">
+            <a href="#about" class="mobile-link block text-stone-800 font-semibold py-2 border-b border-cream-200/60">Tentang Saya</a>
+            <a href="#experience" class="mobile-link block text-stone-800 font-semibold py-2 border-b border-cream-200/60">Pengalaman</a>
+            <a href="#dinsos-gallery" class="mobile-link block text-stone-800 font-semibold py-2 border-b border-cream-200/60">Dokumentasi Magang</a>
+            <a href="#skills" class="mobile-link block text-stone-800 font-semibold py-2 border-b border-cream-200/60">Keahlian</a>
+            <a href="#achievements" class="mobile-link block text-stone-800 font-semibold py-2 border-b border-cream-200/60">Prestasi & Sertifikasi</a>
+            <a href="#contact" class="mobile-link block text-stone-800 font-semibold py-2">Kontak</a>
+            <a href="#contact" class="block w-full text-center py-3 bg-maroon-700 text-cream-50 rounded-xl font-semibold shadow-md">
+                Hubungi Saya
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden relative bg-gradient-to-b from-cream-100/60 to-cream-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Left Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-maroon-100 text-maroon-800 text-xs sm:text-sm font-semibold tracking-wide border border-maroon-200/60 shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-maroon-600 animate-ping"></span>
+                        Fresh Graduate S1 Administrasi Publik • Predikat Cumlaude (IPK 3.64)
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-stone-900 leading-tight">
+                        Dela Assalma Aulia, <span class="text-maroon-700 italic">S.A.P.</span>
+                    </h1>
+
+                    <p class="text-lg sm:text-xl font-medium text-stone-700 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Spesialis Pelayanan Publik, Administrasi, & Pengelolaan Dokumen
+                    </p>
+
+                    <p class="text-stone-600 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+                        Lulusan S1 Administrasi Publik berpencapaian tinggi dengan rekam jejak teruji dalam optimalisasi tata kelola administrasi, kearsipan dokumen, serta koordinasi pelayanan publik di Dinas Sosial Kota Surabaya. Memiliki semangat tinggi, disiplin, adaptif, dan siap berkontribusi profesional.
+                    </p>
+
+                    <!-- CTAs & Social Links -->
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#experience" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-maroon-700 hover:bg-maroon-800 text-cream-50 font-semibold shadow-lg hover:shadow-maroon-700/20 transition-all duration-300 text-center flex items-center justify-center gap-2">
+                            <span>Lihat Pengalaman Kerja</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                        <a href="#contact" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-cream-100 hover:bg-cream-200 text-maroon-900 font-semibold border border-cream-300 shadow-sm transition-all duration-300 text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-file-invoice text-maroon-700"></i>
+                            <span>Kontak & Resume</span>
+                        </a>
+                    </div>
+
+                    <!-- Direct Quick Social Media Badges -->
+                    <div class="pt-6 flex items-center justify-center lg:justify-start gap-4 text-stone-600">
+                        <span class="text-xs font-bold uppercase tracking-wider text-cream-700">Media Sosial:</span>
+                        <a href="https://linkedin.com/in/dela-assalma-aulia" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-cream-100 border border-cream-300 flex items-center justify-center text-maroon-800 hover:bg-maroon-700 hover:text-cream-50 hover:border-maroon-700 transition-all shadow-sm" title="LinkedIn Profile">
+                            <i class="fa-brands fa-linkedin-in text-base"></i>
+                        </a>
+                        <a href="https://instagram.com/delaassalma" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-cream-100 border border-cream-300 flex items-center justify-center text-maroon-800 hover:bg-maroon-700 hover:text-cream-50 hover:border-maroon-700 transition-all shadow-sm" title="Instagram Profile">
+                            <i class="fa-brands fa-instagram text-base"></i>
+                        </a>
+                        <a href="mailto:salmaella08@gmail.com" class="w-10 h-10 rounded-full bg-cream-100 border border-cream-300 flex items-center justify-center text-maroon-800 hover:bg-maroon-700 hover:text-cream-50 hover:border-maroon-700 transition-all shadow-sm" title="Kirim Email">
+                            <i class="fa-regular fa-envelope text-base"></i>
+                        </a>
+                        <a href="https://wa.me/6281215199469" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-cream-100 border border-cream-300 flex items-center justify-center text-maroon-800 hover:bg-maroon-700 hover:text-cream-50 hover:border-maroon-700 transition-all shadow-sm" title="WhatsApp Direct">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Profile Image Card -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-sm sm:max-w-md">
+                        <!-- Background Decorative Frame -->
+                        <div class="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-maroon-700 via-maroon-500 to-cream-300 opacity-80 blur-lg"></div>
+                        
+                        <!-- Image Container Card -->
+                        <div class="relative bg-cream-100 p-3 sm:p-4 rounded-3xl border border-cream-300 shadow-xl overflow-hidden">
+                            <img src="WhatsApp Image 2026-09-30 at 15.13.35.jpeg" alt="Dela Assalma Aulia, S.A.P." class="w-full h-[430px] sm:h-[480px] object-cover object-top rounded-2xl shadow-inner">
+                            
+                            <!-- Floating Badge Info -->
+                            <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-cream-50/95 backdrop-blur-md border border-cream-200/80 shadow-lg flex items-center gap-4">
+                                <div class="p-3 bg-maroon-100 text-maroon-800 rounded-lg">
+                                    <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold uppercase tracking-wider text-maroon-800">Predikat Kelulusan</p>
+                                    <p class="text-base font-serif font-bold text-stone-900">Cumlaude (IPK 3.64 / 4.00)</p>
+                                    <p class="text-xs text-stone-500">Univ. Dr. Soetomo Surabaya</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Metric Highlights Section -->
+    <section class="py-10 bg-maroon-800 text-cream-50 relative z-20 shadow-inner">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-maroon-700/60">
+                <div class="p-4">
+                    <div class="text-3xl sm:text-4xl font-serif font-bold text-cream-100">3.64 / 4.00</div>
+                    <div class="text-xs sm:text-sm text-cream-300 uppercase tracking-widest font-semibold mt-1">IPK Cumlaude</div>
+                </div>
+                <div class="p-4 pt-6 md:pt-4">
+                    <div class="text-3xl sm:text-4xl font-serif font-bold text-cream-100">Nilai A</div>
+                    <div class="text-xs sm:text-sm text-cream-300 uppercase tracking-widest font-semibold mt-1">Magang Dinsos Surabaya</div>
+                </div>
+                <div class="p-4 pt-6 md:pt-4">
+                    <div class="text-3xl sm:text-4xl font-serif font-bold text-cream-100">40 Jam</div>
+                    <div class="text-xs sm:text-sm text-cream-300 uppercase tracking-widest font-semibold mt-1">Sertifikasi Pelatihan TIK</div>
+                </div>
+                <div class="p-4 pt-6 md:pt-4">
+                    <div class="text-3xl sm:text-4xl font-serif font-bold text-cream-100">Score 450</div>
+                    <div class="text-xs sm:text-sm text-cream-300 uppercase tracking-widest font-semibold mt-1">TEAFL English Certification</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 md:py-28 bg-cream-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Photo Gallery Feature -->
+                <div class="lg:col-span-5 order-2 lg:order-1">
+                    <div class="relative">
+                        <div class="rounded-2xl overflow-hidden border-4 border-cream-100 shadow-xl bg-cream-200">
+                            <img src="WhatsApp Image 2026-09-30 at 13.50.19.jpeg" alt="Dela Assalma Aulia - Aktivitas Lapangan" class="w-full h-[450px] object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <!-- Mini Accent Card -->
+                        <div class="absolute -bottom-6 -right-4 sm:-right-6 bg-cream-100 p-5 rounded-2xl border border-cream-300 shadow-xl max-w-xs hidden sm:block">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-maroon-700 text-cream-50 flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-heart-pulse"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-stone-900">Karakter Pribadi</p>
+                                    <p class="text-xs text-stone-600">Energik, Kritis, Komunikatif & Adaptif</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Summary -->
+                <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
+                    <div class="inline-block px-3 py-1 rounded-md bg-maroon-100 text-maroon-800 text-xs font-bold tracking-wider uppercase">
+                        Tentang Saya
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 leading-tight">
+                        Dedikasi Tinggi dalam Pelayanan Publik & Manajemen Administrasi
+                    </h2>
+                    <p class="text-stone-700 leading-relaxed text-base sm:text-lg">
+                        Saya merupakan lulusan Sarjana Administrasi Publik (S.A.P) dari Universitas Dr. Soetomo Surabaya dengan predikat <strong class="text-maroon-800 font-semibold">Cumlaude (IPK 3.64)</strong>. Memiliki pemahaman mendalam mengenai sistem administrasi pemerintahan, pengelolaan kearsipan dokumen resmi, verifikasi data publik, serta koordinasi antar divisi.
+                    </p>
+                    <p class="text-stone-600 leading-relaxed text-sm sm:text-base">
+                        Berbekal pengalaman magang berpredikat A di Dinas Sosial Kota Surabaya serta aktif sebagai pengurus dan panitia pelaksana kegiatan seminar, KKN, dan penerimaan mahasiswa baru, saya terbiasa mengelola komunikasi publik, penyusunan proposal resmi, hingga manajemen jadwal yang efisien.
+                    </p>
+
+                    <!-- Focus Areas / Career Target -->
+                    <div class="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-4 rounded-xl bg-cream-100 border border-cream-200">
+                            <div class="text-maroon-700 text-lg mb-2"><i class="fa-solid fa-building-user"></i></div>
+                            <h3 class="font-bold text-stone-900 text-sm">Bidang Target Karir</h3>
+                            <p class="text-xs text-stone-600 mt-1">Administrasi, Pelayanan Publik, Customer Service, Human Resources (HR), & Operasional.</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-cream-100 border border-cream-200">
+                            <div class="text-maroon-700 text-lg mb-2"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <h3 class="font-bold text-stone-900 text-sm">Latar Belakang Pendidikan</h3>
+                            <p class="text-xs text-stone-600 mt-1">S1 Administrasi Publik - Universitas Dr. Soetomo Surabaya (2022 - 2026)</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Projects Section -->
+    <section id="experience" class="py-20 bg-cream-100/60 border-y border-cream-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <div class="inline-block px-3 py-1 rounded-md bg-maroon-100 text-maroon-800 text-xs font-bold tracking-wider uppercase">
+                    Rekam Jejak & Pengalaman
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900">
+                    Pengalaman Kerja & Kepanitiaan Organisasi
+                </h2>
+                <p class="text-stone-600 text-sm sm:text-base">
+                    Pengalaman nyata dalam pelayanan publik, pengelolaan administrasi, koordinasi humas, dan edukasi masyarakat.
+                </p>
+            </div>
+
+            <!-- Experience Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Experience Card 1: Dinas Sosial -->
+                <div class="bg-cream-50 p-6 sm:p-8 rounded-2xl border border-cream-300 shadow-sm hover:shadow-md transition-all duration-300 relative flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-start justify-between gap-4 mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-maroon-700 uppercase tracking-wider block">Magang Administrasi & Pelayanan</span>
+                                <h3 class="text-xl font-bold text-stone-900 group-hover:text-maroon-800 transition-colors mt-1">Dinas Sosial Kota Surabaya</h3>
+                            </div>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 text-xs font-bold rounded-full whitespace-nowrap border border-emerald-200">
+                                Predikat A
+                            </span>
+                        </div>
+                        <p class="text-xs font-semibold text-stone-500 mb-4 flex items-center gap-2">
+                            <i class="fa-regular fa-calendar text-maroon-700"></i> Feb 2025 – Mar 2025 • Surabaya, Jawa Timur
+                        </p>
+                        <ul class="space-y-2.5 text-stone-700 text-sm mb-6 list-disc list-inside">
+                            <li>Memproses dan mengarsipkan dokumen administrasi pelayanan publik dengan akurasi 100%.</li>
+                            <li>Melayani dan memverifikasi kelengkapan berkas permohonan masyarakat untuk mempercepat proses pelayanan publik.</li>
+                            <li>Bekerja sama dengan tim antardivisi dalam mendukung operasional administrasi dan program kesejahteraan sosial Pemkot Surabaya.</li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-cream-200 flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 bg-cream-200 text-stone-800 text-xs rounded-md font-medium">Pelayanan Publik</span>
+                        <span class="px-2.5 py-1 bg-cream-200 text-stone-800 text-xs rounded-md font-medium">Pengelolaan Arsip</span>
+                        <span class="px-2.5 py-1 bg-cream-200 text-stone-800 text-xs rounded-md font-medium">Verifikasi Dokumen</span>
+                    </div>
+                </div>
+
+                <!-- Experience Card 2: KKN Program -->
+                <div class="bg-cream-50 p-6 sm:p-8 rounded-2xl border border-cream-300 shadow-sm hover:shadow-md transition-all duration-300 relative flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-start justify-between gap-4 mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-maroon-700 uppercase tracking-wider block">Pengabdian Masyarakat (KKN Tematik)</span>
+                                <h3 class="text-xl font-bold text-stone-900 group-hover:text-maroon-800 transition-colors mt-1">LPPM Universitas Dr. Soetomo</h3>
+                            </div>
+                            <span class="px-3 py-1 bg-maroon-100 text-maroon-800 text-xs font-bold rounded-full whitespace-nowrap border border-maroon-200">
+                                Koordinator Program
+                            </span>
+                        </div>
+                        <p class="text-xs font-semibold text-stone-500 mb-4 flex items-center gap-2">
+                            <i class="fa-regular fa-calendar text-maroon-700"></i> Agustus 2025 • Desa Kedung Caluk, Kab. Probolinggo
+                        </p>
+                        <ul class="space-y-2.5 text-stone-700 text-sm mb-6 list-disc list-inside">
+                            <li>Menyusun jadwal program kerja dan berperan aktif dalam tim perencana kegiatan pengabdian Desa Kedung Caluk, Krejengan.</li>
+                            <li>Memberikan edukasi dan sosialisasi kesiapsiagaan bencana kepada warga menggunakan aplikasi InaRISK.</li>
+                            <li>Menyelenggarakan workshop pencegahan kebakaran bagi siswa Sekolah Dasar secara interaktif dan aplikatif.</li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-cream-200 flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 bg-cream-200 text-stone-800 text-xs rounded-md font-medium">Edukasi Bencana</span>
+                        <span class="px-2.5 py-1 bg-cream-200 text-stone-800 text-xs rounded-md font-medium">InaRISK App</span>
+                        <span class="px-2.5 py-1 bg-cream-200 text-stone-800 text-xs rounded-md font-medium">Manajemen Kegiatan</span>
+                    </div>
+                </div>
+
+                <!-- Experience Card 3: Humas & Sekretaris Webinar -->
+                <div class="bg-cream-50 p-6 sm:p-8 rounded-2xl border border-cream-300 shadow-sm hover:shadow-md transition-all duration-300 relative flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-start justify-between gap-4 mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-maroon-700 uppercase tracking-wider block">Kepanitiaan Acara Akademik</span>
+                                <h3 class="text-xl font-bold text-stone-900 group-hover:text-maroon-800 transition-colors mt-1">Humas & Sekretaris Webinar Nasional</h3>
+                            </div>
+                            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-bold rounded-full whitespace-nowrap border border-amber-200">
+                                Universitas Dr. Soetomo
+                            </span>
+                        </div>
+                        <p class="text-xs font-semibold text-stone-500 mb-4 flex items-center gap-2">
+                            <i class="fa-regular fa-calendar text-maroon-700"></i> September 2023 • Surabaya
+                        </p>
+                        <ul class="space-y-2.5 text-stone-700 text-sm mb-6 list-disc list-inside">
+                            <li>Menyusun dan mengajukan proposal kerja sama/sponsorship kepada pihak eksternal dan pemateri.</li>
+                            <li>Mengelola korespondensi, hubungan eksternal, dan komunikasi intensif dengan narasumber acara.</li>
+                            <li>Pencatatan notulensi rapat, penyusunan dokumentasi administrasi, dan koordinasi panitia antar bidang.</li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-cream-200 flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 bg-cream-200 text-stone-800 text-xs rounded-md font-medium">Penyusunan Proposal</span>
+                        <span class="px-2.5 py-1 bg-cream-200 text-stone-800 text-xs rounded-md font-medium">Korespondensi</span>
+                        <span class="px-2.5 py-1 bg-cream-200 text-stone-800 text-xs rounded-md font-medium">Public Relations</span>
+                    </div>
+                </div>
+
+                <!-- Experience Card 4: Humas PP Khoirul Huda 1 -->
+                <div class="bg-cream-50 p-6 sm:p-8 rounded-2xl border border-cream-300 shadow-sm hover:shadow-md transition-all duration-300 relative flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-start justify-between gap-4 mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-maroon-700 uppercase tracking-wider block">Kepanitiaan Seleksi Santri/Mahasiswa</span>
+                                <h3 class="text-xl font-bold text-stone-900 group-hover:text-maroon-800 transition-colors mt-1">Humas Seleksi Mahasiswa Baru</h3>
+                            </div>
+                            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-bold rounded-full whitespace-nowrap border border-amber-200">
+                                PP Khoirul Huda 1
+                            </span>
+                        </div>
+                        <p class="text-xs font-semibold text-stone-500 mb-4 flex items-center gap-2">
+                            <i class="fa-regular fa-calendar text-maroon-700"></i> Mei 2023 • Surabaya
+                        </p>
+                        <ul class="space-y-2.5 text-stone-700 text-sm mb-6 list-disc list-inside">
+                            <li>Mengelola layanan informasi dan saluran komunikasi resmi calon peserta melalui media sosial.</li>
+                            <li>Menyusun rundown acara, mengoordinasikan pembawa acara (MC), serta menyiapkan kebutuhan operasional tes seleksi.</li>
+                            <li>Mengawasi kelancaran seluruh tahapan seleksi masuk mahasiswa baru pondok pesantren.</li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-cream-200 flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 bg-cream-200 text-stone-800 text-xs rounded-md font-medium">Customer Information</span>
+                        <span class="px-2.5 py-1 bg-cream-200 text-stone-800 text-xs rounded-md font-medium">Event Rundown</span>
+                        <span class="px-2.5 py-1 bg-cream-200 text-stone-800 text-xs rounded-md font-medium">Media Sosial</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Dinas Sosial Internship Documentation Gallery Showcase -->
+    <section id="dinsos-gallery" class="py-20 bg-cream-50 border-b border-cream-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="bg-cream-100/80 p-6 sm:p-10 rounded-3xl border border-cream-300 shadow-sm">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-4 border-b border-cream-300">
+                    <div>
+                        <span class="text-xs font-bold text-maroon-700 uppercase tracking-widest block">Dokumentasi Magang Praktik Kerja</span>
+                        <h3 class="text-2xl sm:text-3xl font-serif font-bold text-stone-900 flex items-center gap-3 mt-1">
+                            <i class="fa-solid fa-building-flag text-maroon-700"></i>
+                            <span>Galeri Kegiatan Magang Dinas Sosial Kota Surabaya</span>
+                        </h3>
+                    </div>
+                    <span class="text-xs text-stone-700 bg-emerald-100 border border-emerald-300 text-emerald-900 px-3.5 py-1.5 rounded-full font-bold self-start sm:self-auto flex items-center gap-1.5">
+                        <i class="fa-solid fa-circle-check text-emerald-600"></i> Predikat Nilai A (Sangat Memuaskan)
+                    </span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Dinsos Photo 1: Pengolahan Data & Laptop Work -->
+                    <div class="group relative rounded-2xl overflow-hidden border border-cream-300 bg-stone-900 shadow-sm flex flex-col">
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="2.jpeg" alt="Pengolahan Data Administrasi Pelayanan Dinsos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-maroon-700/90 backdrop-blur-md text-cream-50 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                                Operasional Administrasi
+                            </span>
+                        </div>
+                        <div class="p-5 bg-cream-50 flex-1 flex flex-col justify-between border-t border-cream-200">
+                            <div>
+                                <h4 class="font-bold text-stone-900 text-base mb-1">Pengolahan Data & Kearsipan Digital</h4>
+                                <p class="text-xs text-stone-600 leading-relaxed">Mengelola dan menginput berkas administrasi pelayanan publik masyarakat secara teliti menggunakan perangkat komputer dinas.</p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-cream-200/80 flex items-center gap-1.5 text-[11px] font-semibold text-maroon-800">
+                                <i class="fa-solid fa-laptop-code"></i> Data Entry & Database Management
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dinsos Photo 2: Pelayanan Front Office / Service Desk -->
+                    <div class="group relative rounded-2xl overflow-hidden border border-cream-300 bg-stone-900 shadow-sm flex flex-col">
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="WhatsApp Image 2026-09-30 at 14.51.36.jpeg" alt="Pelayanan Front Office dan Interaksi Publik" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-maroon-700/90 backdrop-blur-md text-cream-50 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                                Front Office & Loket
+                            </span>
+                        </div>
+                        <div class="p-5 bg-cream-50 flex-1 flex flex-col justify-between border-t border-cream-200">
+                            <div>
+                                <h4 class="font-bold text-stone-900 text-base mb-1">Pelayanan Langsung Masyarakat</h4>
+                                <p class="text-xs text-stone-600 leading-relaxed">Mendampingi serta melayani pemohon program bantuan sosial dalam verifikasi kelengkapan dokumen persyaratan resmi.</p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-cream-200/80 flex items-center gap-1.5 text-[11px] font-semibold text-maroon-800">
+                                <i class="fa-solid fa-headset"></i> Customer Service & Public Service
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dinsos Photo 3: Desk Workspace Documents -->
+                    <div class="group relative rounded-2xl overflow-hidden border border-cream-300 bg-stone-900 shadow-sm flex flex-col">
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="WhatsApp Image 2026-09-30 at 14.51.30.jpeg" alt="Verifikasi Dokumen Fisik & Digital" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-maroon-700/90 backdrop-blur-md text-cream-50 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                                Verifikasi Berkas
+                            </span>
+                        </div>
+                        <div class="p-5 bg-cream-50 flex-1 flex flex-col justify-between border-t border-cream-200">
+                            <div>
+                                <h4 class="font-bold text-stone-900 text-base mb-1">Verifikasi Dokumen & Rekapitulasi</h4>
+                                <p class="text-xs text-stone-600 leading-relaxed">Melakukan validasi silang antara dokumen cetak fisik dengan spreadsheet data Pemkot Surabaya untuk menjamin tingkat akurasi 100%.</p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-cream-200/80 flex items-center gap-1.5 text-[11px] font-semibold text-maroon-800">
+                                <i class="fa-solid fa-folder-open"></i> Validasi Berkas & Excel Spreadsheets
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dinsos Photo 4: Coordination with Supervisor (Sitting) -->
+                    <div class="group relative rounded-2xl overflow-hidden border border-cream-300 bg-stone-900 shadow-sm flex flex-col">
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="1.jpeg" alt="Bimbingan Koordinasi Supervisi Magang" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-maroon-700/90 backdrop-blur-md text-cream-50 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                                Bimbingan Supervisi
+                            </span>
+                        </div>
+                        <div class="p-5 bg-cream-50 flex-1 flex flex-col justify-between border-t border-cream-200">
+                            <div>
+                                <h4 class="font-bold text-stone-900 text-base mb-1">Koordinasi & Konsultasi Tugas</h4>
+                                <p class="text-xs text-stone-600 leading-relaxed">Diskusi rutin bersama pembimbing teknis Dinas Sosial terkait mekanisme verifikasi dokumen dan standar operasional pelayanan.</p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-cream-200/80 flex items-center gap-1.5 text-[11px] font-semibold text-maroon-800">
+                                <i class="fa-solid fa-comments text-maroon-700"></i> Komunikasi Organisasi & Evaluasi Kerja
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dinsos Photo 5: Photo with Supervisor (Standing) -->
+                    <div class="group relative rounded-2xl overflow-hidden border border-cream-300 bg-stone-900 shadow-sm flex flex-col sm:col-span-2 lg:col-span-2">
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="3.jpeg" alt="Penyelesaian Program Magang bersama Pembimbing Dinas Sosial" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-maroon-700/90 backdrop-blur-md text-cream-50 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                                Penutupan Magang
+                            </span>
+                        </div>
+                        <div class="p-5 bg-cream-50 flex-1 flex flex-col justify-between border-t border-cream-200">
+                            <div>
+                                <h4 class="font-bold text-stone-900 text-base mb-1">Apresiasi & Penuntasan Program Praktik Kerja</h4>
+                                <p class="text-xs text-stone-600 leading-relaxed">Sesi foto resmi bersama pembimbing lapangan Dinas Sosial Kota Surabaya seusai penuntasan program magang dengan perolehan <strong class="text-maroon-800">Nilai Akhir A</strong>.</p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-cream-200/80 flex items-center gap-1.5 text-[11px] font-semibold text-maroon-800">
+                                <i class="fa-solid fa-award"></i> Dinas Sosial Kota Surabaya • Sertifikasi Magang
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-cream-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <div class="inline-block px-3 py-1 rounded-md bg-maroon-100 text-maroon-800 text-xs font-bold tracking-wider uppercase">
+                    Kompetensi Unggulan
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900">
+                    Keahlian Soft Skill & Hard Skill
+                </h2>
+                <p class="text-stone-600 text-sm sm:text-base">
+                    Penguasaan perangkat lunak administrasi dan keterampilan interpersonal pendukung produktivitas kerja.
+                </p>
+            </div>
+
+            <!-- Dokumentasi Foto KKN Showcase Section -->
+            <div class="mt-8 bg-cream-50 p-6 sm:p-8 rounded-3xl border border-cream-300 shadow-sm mb-12">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-cream-200">
+                    <div>
+                        <span class="text-xs font-bold text-maroon-700 uppercase tracking-widest block">Dokumentasi Lapangan</span>
+                        <h3 class="text-2xl font-serif font-bold text-stone-900 flex items-center gap-2 mt-1">
+                            <i class="fa-solid fa-users-line text-maroon-700"></i>
+                            <span>Galeri Kegiatan KKN Tematik Probolinggo</span>
+                        </h3>
+                    </div>
+                    <span class="text-xs text-stone-500 bg-cream-200/80 px-3 py-1.5 rounded-full font-medium self-start sm:self-auto">
+                        <i class="fa-solid fa-location-dot text-maroon-700 mr-1"></i> Desa Kedung Caluk, Krejengan
+                    </span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <!-- Photo 1: Sosialisasi InaRISK -->
+                    <div class="group relative rounded-2xl overflow-hidden border border-cream-300 bg-stone-900 shadow-sm flex flex-col">
+                        <div class="h-60 overflow-hidden">
+                            <img src="WhatsApp Image 2026-09-30 at 15.00.36.jpeg" alt="Edukasi Aplikasi InaRISK kepada Warga Desa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 bg-cream-100 flex-1 flex flex-col justify-between border-t border-cream-200">
+                            <div>
+                                <span class="text-[10px] font-bold text-maroon-700 uppercase tracking-wider block mb-1">Edukasi Warga Desa</span>
+                                <h4 class="font-bold text-stone-900 text-sm">Sosialisasi Aplikasi InaRISK</h4>
+                            </div>
+                            <p class="text-xs text-stone-600 mt-2">Mendampingi & mengedukasi warga masyarakat secara langsung mengenai penggunaan aplikasi InaRISK untuk mitigasi bencana daerah.</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 2: Workshop Kebakaran SD -->
+                    <div class="group relative rounded-2xl overflow-hidden border border-cream-300 bg-stone-900 shadow-sm flex flex-col">
+                        <div class="h-60 overflow-hidden">
+                            <img src="WhatsApp Image 2026-09-30 at 14.51.42.jpeg" alt="Workshop Pencegahan Kebakaran di SD" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 bg-cream-100 flex-1 flex flex-col justify-between border-t border-cream-200">
+                            <div>
+                                <span class="text-[10px] font-bold text-maroon-700 uppercase tracking-wider block mb-1">Pendidikan & Literasi</span>
+                                <h4 class="font-bold text-stone-900 text-sm">Workshop Kebakaran di Sekolah Dasar</h4>
+                            </div>
+                            <p class="text-xs text-stone-600 mt-2">Menyampaikan materi tanda-tanda kebakaran & tindakan tanggap darurat secara interaktif di hadapan para siswa SD.</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 3: Foto Bersama Siswa SD -->
+                    <div class="group relative rounded-2xl overflow-hidden border border-cream-300 bg-stone-900 shadow-sm flex flex-col">
+                        <div class="h-60 overflow-hidden">
+                            <img src="WhatsApp Image 2026-09-30 at 15.00.42.jpeg" alt="Foto Bersama Seluruh Siswa SD & Tim KKN" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 bg-cream-100 flex-1 flex flex-col justify-between border-t border-cream-200">
+                            <div>
+                                <span class="text-[10px] font-bold text-maroon-700 uppercase tracking-wider block mb-1">Penyelesaian Program</span>
+                                <h4 class="font-bold text-stone-900 text-sm">Kebersamaan dengan Siswa SD</h4>
+                            </div>
+                            <p class="text-xs text-stone-600 mt-2">Sesi foto bersama siswa-siswi dan guru pendamping seusai pelaksanaan sosialisasi & edukasi kebencanaan.</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 4: Tim KKN Bus -->
+                    <div class="group relative rounded-2xl overflow-hidden border border-cream-300 bg-stone-900 shadow-sm flex flex-col">
+                        <div class="h-60 overflow-hidden">
+                            <img src="WhatsApp Image 2026-09-30 at 14.51.41.jpeg" alt="Tim KKN LPPM Unitomo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 bg-cream-100 flex-1 flex flex-col justify-between border-t border-cream-200">
+                            <div>
+                                <span class="text-[10px] font-bold text-maroon-700 uppercase tracking-wider block mb-1">Keberangkatan Tim</span>
+                                <h4 class="font-bold text-stone-900 text-sm">Tim KKN Tematik Unitomo</h4>
+                            </div>
+                            <p class="text-xs text-stone-600 mt-2">Pelepasan dan foto bersama seluruh mahasiswa anggota tim KKN sebelum pemberangkatan ke lokasi pengabdian.</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 5: Pendataan & Interaksi -->
+                    <div class="group relative rounded-2xl overflow-hidden border border-cream-300 bg-stone-900 shadow-sm flex flex-col sm:col-span-2 lg:col-span-2">
+                        <div class="h-60 overflow-hidden">
+                            <img src="WhatsApp Image 2026-09-30 at 14.52.08.jpeg" alt="Interaksi Sosial & Pendataan Lapangan KKN" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 bg-cream-100 flex-1 flex flex-col justify-between border-t border-cream-200">
+                            <div>
+                                <span class="text-[10px] font-bold text-maroon-700 uppercase tracking-wider block mb-1">Interaksi Kemasyarakatan</span>
+                                <h4 class="font-bold text-stone-900 text-sm">Pendataan & Pendampingan Warga</h4>
+                            </div>
+                            <p class="text-xs text-stone-600 mt-2">Komunikasi aktif dan wawancara ramah bersama warga masyarakat lokal Desa Kedung Caluk untuk identifikasi kebutuhan program.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                
+                <!-- Hard Skills & Digital Tools -->
+                <div class="bg-cream-100/70 p-8 rounded-3xl border border-cream-300 shadow-sm space-y-6">
+                    <div class="flex items-center gap-3 border-b border-cream-300 pb-4">
+                        <div class="w-10 h-10 rounded-xl bg-maroon-700 text-cream-50 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-stone-900">Hard Skills & Perangkat Lunak</h3>
+                            <p class="text-xs text-stone-600">Aplikasi Administrasi & Pengolahan Data</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="px-4 py-2 bg-cream-50 border border-cream-300 text-stone-800 font-semibold text-sm rounded-xl shadow-sm flex items-center gap-2 hover:border-maroon-700 transition-colors">
+                            <i class="fa-solid fa-file-excel text-emerald-700"></i> Microsoft Excel (Sertifikat Nilai A)
+                        </span>
+                        <span class="px-4 py-2 bg-cream-50 border border-cream-300 text-stone-800 font-semibold text-sm rounded-xl shadow-sm flex items-center gap-2 hover:border-maroon-700 transition-colors">
+                            <i class="fa-solid fa-file-word text-blue-700"></i> Microsoft Word (Sertifikat Nilai A-)
+                        </span>
+                        <span class="px-4 py-2 bg-cream-50 border border-cream-300 text-stone-800 font-semibold text-sm rounded-xl shadow-sm flex items-center gap-2 hover:border-maroon-700 transition-colors">
+                            <i class="fa-solid fa-file-powerpoint text-amber-700"></i> Microsoft PowerPoint
+                        </span>
+                        <span class="px-4 py-2 bg-cream-50 border border-cream-300 text-stone-800 font-semibold text-sm rounded-xl shadow-sm flex items-center gap-2 hover:border-maroon-700 transition-colors">
+                            <i class="fa-brands fa-google text-red-600"></i> Google Docs, Sheets, Slides, Forms
+                        </span>
+                        <span class="px-4 py-2 bg-cream-50 border border-cream-300 text-stone-800 font-semibold text-sm rounded-xl shadow-sm flex items-center gap-2 hover:border-maroon-700 transition-colors">
+                            <i class="fa-solid fa-palette text-cyan-600"></i> Canva Graphic Design
+                        </span>
+                        <span class="px-4 py-2 bg-cream-50 border border-cream-300 text-stone-800 font-semibold text-sm rounded-xl shadow-sm flex items-center gap-2 hover:border-maroon-700 transition-colors">
+                            <i class="fa-solid fa-envelope-open-text text-maroon-700"></i> Korespondensi Pemerintahan
+                        </span>
+                        <span class="px-4 py-2 bg-cream-50 border border-cream-300 text-stone-800 font-semibold text-sm rounded-xl shadow-sm flex items-center gap-2 hover:border-maroon-700 transition-colors">
+                            <i class="fa-solid fa-box-archive text-stone-700"></i> Kearsipan & Manajemen Dokumen
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="bg-cream-100/70 p-8 rounded-3xl border border-cream-300 shadow-sm space-y-6">
+                    <div class="flex items-center gap-3 border-b border-cream-300 pb-4">
+                        <div class="w-10 h-10 rounded-xl bg-maroon-700 text-cream-50 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-user-gear"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-stone-900">Soft Skills Interpersonal</h3>
+                            <p class="text-xs text-stone-600">Kemampuan Kerja & Kepemimpinan</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="px-4 py-2 bg-cream-50 border border-cream-300 text-stone-800 font-semibold text-sm rounded-xl shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-comments text-maroon-700"></i> Komunikasi Publik Efektif
+                        </span>
+                        <span class="px-4 py-2 bg-cream-50 border border-cream-300 text-stone-800 font-semibold text-sm rounded-xl shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-layer-group text-maroon-700"></i> Multitasking & Operasional
+                        </span>
+                        <span class="px-4 py-2 bg-cream-50 border border-cream-300 text-stone-800 font-semibold text-sm rounded-xl shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-puzzle-piece text-maroon-700"></i> Memecahkan Masalah (Problem Solving)
+                        </span>
+                        <span class="px-4 py-2 bg-cream-50 border border-cream-300 text-stone-800 font-semibold text-sm rounded-xl shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-clock text-maroon-700"></i> Manajemen Waktu & Kedisiplinan
+                        </span>
+                        <span class="px-4 py-2 bg-cream-50 border border-cream-300 text-stone-800 font-semibold text-sm rounded-xl shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-users text-maroon-700"></i> Kerja Sama Tim (Teamwork)
+                        </span>
+                        <span class="px-4 py-2 bg-cream-50 border border-cream-300 text-stone-800 font-semibold text-sm rounded-xl shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-microphone-lines text-maroon-700"></i> Public Speaking & Presentasi
+                        </span>
+                        <span class="px-4 py-2 bg-cream-50 border border-cream-300 text-stone-800 font-semibold text-sm rounded-xl shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-crown text-maroon-700"></i> Leadership & Orientasi Belajar
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements & Certification Section -->
+    <section id="achievements" class="py-20 bg-cream-100/50 border-t border-cream-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <div class="inline-block px-3 py-1 rounded-md bg-maroon-100 text-maroon-800 text-xs font-bold tracking-wider uppercase">
+                    Pencapaian & Sertifikasi
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900">
+                    Sertifikat Resmi & Galeri Kelulusan
+                </h2>
+                <p class="text-stone-600 text-sm sm:text-base">
+                    Bukti kompetensi formal dan momen penting perjalanan akademik S1 Administrasi Publik.
+                </p>
+            </div>
+
+            <!-- Certification List Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                
+                <div class="bg-cream-50 p-6 rounded-2xl border border-cream-300 shadow-sm space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <span class="text-xs font-bold text-maroon-700 uppercase tracking-wider block">Bahasa Inggris (Feb 2026)</span>
+                    <h3 class="font-bold text-lg text-stone-900">TEAFL Certificate (Score: 450)</h3>
+                    <p class="text-xs text-stone-600">Unitomo Language and Culture Center (ULCC), Universitas Dr. Soetomo Surabaya.</p>
+                </div>
+
+                <div class="bg-cream-50 p-6 rounded-2xl border border-cream-300 shadow-sm space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-file-code"></i>
+                    </div>
+                    <span class="text-xs font-bold text-maroon-700 uppercase tracking-wider block">Sertifikasi Komputer (Feb 2024)</span>
+                    <h3 class="font-bold text-lg text-stone-900">MS. Excel Lembar Kerja Pemerintahan</h3>
+                    <p class="text-xs text-stone-600">Laboratorium Komputer FIA Unitomo • Dinyatakan LULUS dengan <strong class="text-emerald-800">Nilai Akhir 96 (Sangat Memuaskan / A)</strong>.</p>
+                </div>
+
+                <div class="bg-cream-50 p-6 rounded-2xl border border-cream-300 shadow-sm space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-800 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-file-signature"></i>
+                    </div>
+                    <span class="text-xs font-bold text-maroon-700 uppercase tracking-wider block">Sertifikasi Komputer (Ags 2023)</span>
+                    <h3 class="font-bold text-lg text-stone-900">MS. Word Korespondensi Pemerintahan</h3>
+                    <p class="text-xs text-stone-600">Laboratorium Komputer FIA Unitomo • Dinyatakan LULUS dengan <strong class="text-blue-800">Nilai Akhir 82 (A-)</strong>.</p>
+                </div>
+
+                <div class="bg-cream-50 p-6 rounded-2xl border border-cream-300 shadow-sm space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-800 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <span class="text-xs font-bold text-maroon-700 uppercase tracking-wider block">Pelatihan Nasional (Mei 2023)</span>
+                    <h3 class="font-bold text-lg text-stone-900">Training Public Speaking</h3>
+                    <p class="text-xs text-stone-600">FEST Management Surabaya & BEM Fakultas Vokasi Universitas Airlangga.</p>
+                </div>
+
+                <div class="bg-cream-50 p-6 rounded-2xl border border-cream-300 shadow-sm space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-800 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <span class="text-xs font-bold text-maroon-700 uppercase tracking-wider block">Pelatihan Nasional (Mei 2023)</span>
+                    <h3 class="font-bold text-lg text-stone-900">Pelatihan Entrepreneurship</h3>
+                    <p class="text-xs text-stone-600">Future Entrepreneur Summit (FESt) X BEM Vokasi Universitas Airlangga.</p>
+                </div>
+
+                <div class="bg-cream-50 p-6 rounded-2xl border border-cream-300 shadow-sm space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-maroon-100 text-maroon-800 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-medal"></i>
+                    </div>
+                    <span class="text-xs font-bold text-maroon-700 uppercase tracking-wider block">Predikat Akademik (2026)</span>
+                    <h3 class="font-bold text-lg text-stone-900">Skripsi Nilai A & Predikat Cumlaude</h3>
+                    <p class="text-xs text-stone-600">Gelar Sarjana Administrasi Publik (S.A.P) • IPK 3.64 / 4.00 di Universitas Dr. Soetomo.</p>
+                </div>
+
+            </div>
+
+            <!-- Graduation Photo Gallery Showcase -->
+            <div class="bg-cream-50 p-6 sm:p-8 rounded-3xl border border-cream-300 shadow-sm">
+                <h3 class="text-xl font-serif font-bold text-stone-900 mb-6 flex items-center gap-2">
+                    <i class="fa-solid fa-camera-retro text-maroon-700"></i>
+                    <span>Galeri Wisuda & Dokumentasi Resmi</span>
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="group relative rounded-2xl overflow-hidden border border-cream-300 h-80 shadow-sm">
+                        <img src="WhatsApp Image 2026-09-30 at 13.47.54.jpeg" alt="Prosesi Wisuda Dela Assalma Aulia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex items-end">
+                            <p class="text-cream-50 text-xs font-semibold">Prosesi Wisuda Sarjana Administrasi Publik bersama Dekan & Pimpinan Kampus</p>
+                        </div>
+                    </div>
+                    <div class="group relative rounded-2xl overflow-hidden border border-cream-300 h-80 shadow-sm">
+                        <img src="WhatsApp Image 2026-09-30 at 12.57.01.jpeg" alt="Dela Assalma Aulia Gelar S.A.P Cumlaude" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex items-end">
+                            <p class="text-cream-50 text-xs font-semibold">Foto Kelulusan Dela Assalma Aulia, S.A.P., Predikat Cumlaude</p>
+                        </div>
+                    </div>
+                    <div class="group relative rounded-2xl overflow-hidden border border-cream-300 h-80 shadow-sm">
+                        <img src="WhatsApp Image 2026-09-30 at 15.13.35.jpeg" alt="Dela Assalma Aulia Portrait" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex items-end">
+                            <p class="text-cream-50 text-xs font-semibold">Portret Profesional Dela Assalma Aulia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 md:py-28 bg-cream-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Info Details -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <div class="inline-block px-3 py-1 rounded-md bg-maroon-100 text-maroon-800 text-xs font-bold tracking-wider uppercase mb-3">
+                            Hubungi Saya
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 leading-tight">
+                            Mari Bekerja Sama & Berkolaborasi
+                        </h2>
+                        <p class="text-stone-600 text-sm sm:text-base mt-3">
+                            Saya sangat terbuka untuk peluang kerja full-time, kontrak, maupun diskusi profesional terkait peran Administrasi, Pelayanan Publik, Customer Service, HR, dan Operasional.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Email -->
+                        <a href="mailto:salmaella08@gmail.com" class="flex items-center gap-4 p-4 rounded-2xl bg-cream-100 border border-cream-300 hover:border-maroon-700 transition-colors shadow-sm group">
+                            <div class="w-12 h-12 rounded-xl bg-maroon-700 text-cream-50 flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold text-stone-500 uppercase tracking-wider block">Email Resmi</span>
+                                <span class="text-stone-900 font-semibold text-sm sm:text-base group-hover:text-maroon-800 transition-colors">salmaella08@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <!-- Phone/WhatsApp -->
+                        <a href="https://wa.me/6281215199469" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 rounded-2xl bg-cream-100 border border-cream-300 hover:border-maroon-700 transition-colors shadow-sm group">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-700 text-cream-50 flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold text-stone-500 uppercase tracking-wider block">Telepon / WhatsApp</span>
+                                <span class="text-stone-900 font-semibold text-sm sm:text-base group-hover:text-emerald-800 transition-colors">+62 812-1519-9469</span>
+                            </div>
+                        </a>
+
+                        <!-- Address -->
+                        <div class="flex items-center gap-4 p-4 rounded-2xl bg-cream-100 border border-cream-300 shadow-sm">
+                            <div class="w-12 h-12 rounded-xl bg-maroon-700 text-cream-50 flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold text-stone-500 uppercase tracking-wider block">Lokasi</span>
+                                <span class="text-stone-900 font-semibold text-sm sm:text-base">Rungkut Asri Timur 15/54, Surabaya, Jawa Timur</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="pt-2">
+                        <span class="text-xs font-bold uppercase tracking-wider text-stone-500 block mb-3">Tautan Profesional & Sosial Media</span>
+                        <div class="flex gap-3">
+                            <a href="https://linkedin.com/in/dela-assalma-aulia" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-xl bg-cream-100 border border-cream-300 text-maroon-900 font-semibold text-sm flex items-center justify-center gap-2 hover:bg-maroon-700 hover:text-cream-50 hover:border-maroon-700 transition-all shadow-sm">
+                                <i class="fa-brands fa-linkedin text-base"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://instagram.com/delaassalma" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-xl bg-cream-100 border border-cream-300 text-maroon-900 font-semibold text-sm flex items-center justify-center gap-2 hover:bg-maroon-700 hover:text-cream-50 hover:border-maroon-700 transition-all shadow-sm">
+                                <i class="fa-brands fa-instagram text-base"></i>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Interactive Form -->
+                <div class="lg:col-span-7 bg-cream-100/80 p-8 sm:p-10 rounded-3xl border border-cream-300 shadow-sm">
+                    <h3 class="text-2xl font-serif font-bold text-stone-900 mb-2">Kirim Pesan Langsung</h3>
+                    <p class="text-xs text-stone-600 mb-6">Silakan isi formulir di bawah ini untuk terhubung langsung melalui email.</p>
+
+                    <form id="contactForm" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="senderName" class="block text-xs font-bold uppercase text-stone-700 mb-1">Nama Lengkap</label>
+                                <input type="text" id="senderName" required placeholder="Masukkan nama Anda" class="w-full px-4 py-3 rounded-xl bg-cream-50 border border-cream-300 text-stone-900 text-sm focus:outline-none focus:border-maroon-700 transition-colors">
+                            </div>
+                            <div>
+                                <label for="senderEmail" class="block text-xs font-bold uppercase text-stone-700 mb-1">Email Anda</label>
+                                <input type="email" id="senderEmail" required placeholder="nama@perusahaan.com" class="w-full px-4 py-3 rounded-xl bg-cream-50 border border-cream-300 text-stone-900 text-sm focus:outline-none focus:border-maroon-700 transition-colors">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="msgSubject" class="block text-xs font-bold uppercase text-stone-700 mb-1">Subjek Pesan</label>
+                            <input type="text" id="msgSubject" required placeholder="Contoh: Penawaran Kerja / Undangan Wawancara" class="w-full px-4 py-3 rounded-xl bg-cream-50 border border-cream-300 text-stone-900 text-sm focus:outline-none focus:border-maroon-700 transition-colors">
+                        </div>
+
+                        <div>
+                            <label for="msgBody" class="block text-xs font-bold uppercase text-stone-700 mb-1">Isi Pesan</label>
+                            <textarea id="msgBody" rows="5" required placeholder="Tuliskan detail pesan atau penawaran kerja Anda di sini..." class="w-full px-4 py-3 rounded-xl bg-cream-50 border border-cream-300 text-stone-900 text-sm focus:outline-none focus:border-maroon-700 transition-colors resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl bg-maroon-700 hover:bg-maroon-800 text-cream-50 font-bold text-sm shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Kirim Pesan Sekarang</span>
+                        </button>
+                    </form>
+
+                    <!-- Feedback Alert Message Container -->
+                    <div id="formStatus" class="hidden mt-4 p-4 rounded-xl text-xs font-semibold text-center"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-maroon-900 text-cream-200 py-12 border-t border-maroon-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 border-b border-maroon-800 pb-8">
+                <div class="text-center md:text-left">
+                    <span class="font-serif font-bold text-xl text-cream-100 block">Dela Assalma Aulia, S.A.P.</span>
+                    <p class="text-xs text-cream-300 mt-1">Lulusan S1 Administrasi Publik • Universitas Dr. Soetomo Surabaya</p>
+                </div>
+
+                <div class="flex items-center gap-6 text-sm font-medium text-cream-300">
+                    <a href="#hero" class="hover:text-cream-50 transition-colors">Beranda</a>
+                    <a href="#about" class="hover:text-cream-50 transition-colors">Tentang</a>
+                    <a href="#experience" class="hover:text-cream-50 transition-colors">Pengalaman</a>
+                    <a href="#dinsos-gallery" class="hover:text-cream-50 transition-colors">Dokumentasi Magang</a>
+                    <a href="#skills" class="hover:text-cream-50 transition-colors">Keahlian</a>
+                    <a href="#contact" class="hover:text-cream-50 transition-colors">Kontak</a>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-cream-400 gap-4">
+                <p>&copy; 2026 Dela Assalma Aulia, S.A.P. All rights reserved.</p>
+                <div class="flex items-center gap-2">
+                    <span>Designed with Maroon & Cream Palette</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Client Script -->
+    <script>
+        // Mobile Navigation Drawer Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Contact Form Interactive Handler (mailto link generator & UI feedback)
+        const contactForm = document.getElementById('contactForm');
+        const formStatus = document.getElementById('formStatus');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('senderName').value;
+            const email = document.getElementById('senderEmail').value;
+            const subject = document.getElementById('msgSubject').value;
+            const body = document.getElementById('msgBody').value;
+
+            // Formulate mailto link
+            const mailtoUrl = `mailto:salmaella08@gmail.com?subject=${encodeURIComponent(subject + " - " + name)}&body=${encodeURIComponent("Nama: " + name + "\nEmail: " + email + "\n\nPesan:\n" + body)}`;
+            
+            // Show Feedback
+            formStatus.className = "mt-4 p-4 rounded-xl text-xs font-semibold text-center bg-emerald-100 text-emerald-800 border border-emerald-200";
+            formStatus.textContent = "Terima kasih! Aplikasi email Anda akan terbuka untuk mengirimkan pesan ini.";
+            formStatus.classList.remove('hidden');
+
+            setTimeout(() => {
+                window.location.href = mailtoUrl;
+            }, 800);
+        });
+    </script>
+</body>
+</html>
